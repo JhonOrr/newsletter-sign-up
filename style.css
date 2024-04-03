@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    border: none;
+}
+
+body{
+    background-color: hsl(235, 18%, 26%);
+}
+ul{
+    list-style: none;
+}
+img{
+    display: block;
+}
+main{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+}
+.card{
+    background-color: hsl(0, 0%, 100%);
+    min-height: 100vh;
+    height: auto;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+
+}
+.card-img-mobile img{
+    width: 100%;
+    padding: 0;
+}
+.card-img-desktop{
+    display: none;
+}
+.card-information{
+    flex: 1;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.card-information-title{
+    font-weight: 700;
+    font-size: 44px;
+}
+.card-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 16px;
+}
+.card-information-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card-information-list > *{
+    display: flex;
+    gap: 8px;
+}
+.card-information-list img{
+    align-self: start;
+}
+
+
+.card-form-field{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.card-form-field{
+    font-size: 12px;
+    font-weight: 700;
+}
+.card-form input{
+    height: 64px;
+    border-radius: 8px;
+    border: 1px solid hsl(231, 7%, 60%);
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.card-form input::placeholder{
+    font-size: 16px;
+
+}
+.card-form-button{
+    background-color: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 8px;
+    height: 64px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.card-form-button:hover{
+    background: linear-gradient(90deg,#ff3e83,#fd634a);
+    box-shadow: 0 1rem 1.5rem #ff3e8350
+}
+
+.card-form-button:active{
+    box-shadow: none
+}
+
+
+
+
+
+@media (min-width: 850px) {
+
+    .card{
+        flex-direction: row-reverse;
+        min-height: 100px;
+        border-radius: 32px;
+        width: 850px;
+        padding: 25px;
+        min-height: auto;
+        height: 500px;
+    }
+    .card >*{
+        flex: 1;
+        flex-basis: 50%; 
+    }
+    .card-img-mobile{
+        display: none;
+    }
+    .card-img-desktop{
+        display: flex;
+        justify-content: flex-end;
+        width: 50%;
+    }
+
+}
+
